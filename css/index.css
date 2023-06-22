@@ -1,82 +1,95 @@
-
-
 @import url('https://fonts.cdnfonts.com/css/getvoip-grotesque');
 
-*{
-    font-family: 'GetVoIP Grotesque', sans-serif;                                                
+* {
+  font-family: 'GetVoIP Grotesque', sans-serif;
 }
 
 nav {
-    background-color: black;
-    height: 15vh;
-    display: flex;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    align-items: center; /* Centra verticalmente los elementos */
-  }
-  
-  nav ul li {
-    margin-right: 10wh;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    font-weight: bolder;
-    color: whitesmoke;
-    padding: 2vh;
-  }
-  
-  nav ul li a:hover {
-    color: black;
-  }
-
-  
-  #logo {
-    height: 15vh;
-  }
-
-  #accountNav{
-    margin-left: auto;
-  }
-
- .activo, nav ul li a:hover{
-    background: #666;
- }
-
-
- nav ul li.noActivo a:hover {
-   background: none;
- }
-
- .menuEmergente{
-    display: none;
- }
-
-
-nav ul li:hover .menuEmergente{
-    display: block;
-    position: absolute;
-    background: black;
-    margin: 2vh 0 0 0;
+  background-color: black;
+  height: 15vh;
+  display: flex;
 }
 
-nav ul li:hover .menuEmergente ul{
-    display: block;
-    margin: 2vh;
+.navbar-container {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  height: 15vh;
 }
 
-nav ul li:hover .menuEmergente ul li{
-    display: block;
-    margin: 3vh;
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  /* Centra verticalmente los elementos */
+}
+
+nav ul li {
+  margin-right: 10wh;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: whitesmoke;
+  padding: 2vh;
+}
+
+nav ul li a:hover {
+  color: black;
 }
 
 
-.optionAccount:hover{
-    background: #666;
+#logo {
+  height: 15vh;
 }
 
+#accountNav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.activo,
+nav ul li a:hover {
+  background: #666;
+}
+
+
+nav ul li.noActivo a:hover {
+  background: none;
+}
+
+.menuEmergente {
+  display: none;
+  z-index: 1;
+}
+
+
+nav ul li:hover .menuEmergente {
+  display: block;
+  position: absolute;
+  background: black;
+  margin: 2vh 0 0 0;
+}
+
+nav ul li:hover .menuEmergente ul {
+  display: block;
+  margin: 2vh;
+}
+
+nav ul li:hover .menuEmergente ul li {
+  display: block;
+  margin: 3vh;
+}
+
+
+
+
+/* CARRUSEL */
+
+.carouselExampleIndicators {
+  height: 70vh;
+}
