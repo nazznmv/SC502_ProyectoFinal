@@ -1,0 +1,51 @@
+
+
+@import url('https://fonts.cdnfonts.com/css/getvoip-grotesque');
+
+*{
+    font-family: 'GetVoIP Grotesque', sans-serif;                                                
+}
+
+nav {
+    background-color: black;
+    height: 15vh;
+    display: flex;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Centra verticalmente los elementos */
+  }
+  
+  nav ul li {
+    margin-right: 10wh;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: whitesmoke;
+    padding: 2vh;
+  }
+  
+  nav ul li a:hover {
+    color: #666;
+  }
+
+  
+  #logo {
+    height: 15vh;
+  }
+
+  #accountNav{
+    margin-left: auto;
+  }
+
+  #accountNav ul li a img{
+    height: 8vh;
+  }
+
+ 
