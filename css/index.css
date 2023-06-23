@@ -4,6 +4,10 @@
   font-family: 'GetVoIP Grotesque', sans-serif;
 }
 
+body{
+  background-color: #F7C295;
+}
+
 nav {
   background-color: black;
   height: 15vh;
@@ -15,6 +19,10 @@ nav {
   align-items: center;
   background-color: black;
   height: 15vh;
+}
+
+.navbar-container ul li a{
+  text-decoration: none;
 }
 
 nav ul {
@@ -65,24 +73,39 @@ nav ul li.noActivo a:hover {
 .menuEmergente {
   display: none;
   z-index: 1;
+  width: max-content;
 }
+
 
 
 nav ul li:hover .menuEmergente {
   display: block;
   position: absolute;
   background: black;
-  margin: 2vh 0 0 0;
+  padding: 2vh 0 2vh 0;
 }
 
 nav ul li:hover .menuEmergente ul {
   display: block;
-  margin: 2vh;
+  margin: 1vh;
 }
 
 nav ul li:hover .menuEmergente ul li {
   display: block;
-  margin: 3vh;
+  margin: 3vh 0;
+}
+
+.menuEmergente ul li a {
+  display: block;
+  width: 100%;
+}
+
+.menuEmergente ul li {
+  margin: 0;
+}
+
+.menuEmergente ul li a{
+  text-decoration: none;
 }
 
 
@@ -102,13 +125,16 @@ nav ul li:hover .menuEmergente ul li {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2vh;
-  margin: 2vh;
+  background-color: #F6F7F6;
+  grid-auto-rows: 1fr;
 }
 
 .grid-item {
   /* background-color: gray; */
+  position: relative;
   color: black; 
   padding: 2vh; 
+  margin: 2vh;
 }
 
 .grid-item img {
@@ -120,4 +146,74 @@ nav ul li:hover .menuEmergente ul li {
 .grid-item:hover img {
   transform: scale(1.1); /* Aumenta la escala de la imagen al 110% */
   transition: transform 0.3s ease; /* Agrega una transición suave de 0.3 segundos */
+}
+
+.grid-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*background-color: black;  Color de fondo del rectángulo (rojo semitransparente en este ejemplo) */
+  opacity: 0; /* Inicialmente, el rectángulo es transparente */
+  transition: opacity 0.3s ease; /* Agrega una transición suave de 0.3 segundos al cambiar la opacidad */
+}
+
+.grid-item:hover::before {
+  opacity: 1; /* Al hacer hover, la opacidad del rectángulo cambia a 1 (totalmente visible) */
+  z-index: 0;
+}
+
+
+/* OVERLAY */
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.grid-item:hover .overlay {
+  opacity: 1;
+}
+
+
+.text {
+  position: absolute;
+  opacity: 0;
+
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: right;
+  transition: opacity 0.3s ease;
+} 
+
+.grid-item:hover .text {
+  text-align: right;
+  opacity: 1;
+  z-index: 1;
+}
+
+.text a{
+  text-decoration: none;
+  color: white;
+}
+
+.grid-item:hover .text a{
+  opacity: 1;
+  z-index: 1;
+  text-decoration: none;
+  font-size: 25px;
+  color: wheat;
 }
