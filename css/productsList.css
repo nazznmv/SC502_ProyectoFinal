@@ -1,0 +1,42 @@
+.column-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Asegura que los elementos se ajusten al ancho del contenedor */
+}
+
+.filtro-container {
+    flex-basis: 25%;
+    /* Ajusta el ancho según tus necesidades */
+    padding: 20px;
+    background-color: white;
+}
+
+.main-content {
+    flex-basis: 75%;
+    /* Ajusta el ancho según tus necesidades */
+    padding: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Ajusta el número de columnas según tus necesidades */
+    gap: 20px;
+}
+
+.filtro ul li{
+    list-style: none;
+    margin-top: 5vh;
+}
+
+.filtro ul li a {
+    text-decoration: none;
+    font-size: large;
+    transition: 0.2s;
+    color: black;
+}
+
+.filtro ul li a:hover {
+    text-decoration: none;
+    font-size: larger;
+}
