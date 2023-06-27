@@ -1,0 +1,28 @@
+
+
+.grid-container-productPage{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vh;
+    background-color: #F6F7F6;
+    grid-auto-rows: 1fr;
+    margin: 10vh;
+    text-align: center;
+  }
+  
+  .grid-item-productPage{
+    /* background-color: gray; */
+    position: relative;
+    color: black; 
+    padding: 2vh; 
+    margin: 2vh;
+  }
+
+  .img-container img{
+    height: 65vh;
+  }
+
+  .grid-item-productPage:hover img {
+    transform: scale(1.1); /* Aumenta la escala de la imagen al 110% */
+    transition: transform 0.3s ease; /* Agrega una transición suave de 0.3 segundos */
+  }
