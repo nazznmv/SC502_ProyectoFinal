@@ -1,0 +1,162 @@
+@import url('https://fonts.cdnfonts.com/css/getvoip-grotesque');
+
+* {
+    font-family: 'GetVoIP Grotesque', sans-serif;
+}
+
+body {
+    background-color: #F7C295;
+}
+
+nav {
+    background-color: black;
+    height: 15vh;
+    display: flex;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    height: 15vh;
+}
+
+.navbar-container ul li a {
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    /* Centra verticalmente los elementos */
+}
+
+nav ul li {
+    margin-right: 10wh;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: whitesmoke;
+    padding: 2vh;
+}
+
+nav ul li a:hover {
+    color: black;
+}
+
+
+#logo {
+    height: 15vh;
+}
+
+#accountNav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.activo,
+nav ul li a:hover {
+    background: #666;
+}
+
+
+nav ul li.noActivo a:hover {
+    background: none;
+}
+
+.menuEmergente {
+    display: none;
+    z-index: 1;
+    width: max-content;
+}
+
+
+
+nav ul li:hover .menuEmergente {
+    display: block;
+    position: absolute;
+    background: black;
+    padding: 2vh 0 2vh 0;
+}
+
+nav ul li:hover .menuEmergente ul {
+    display: block;
+    margin: 1vh;
+}
+
+nav ul li:hover .menuEmergente ul li {
+    display: block;
+    margin: 3vh 0;
+}
+
+.menuEmergente ul li a {
+    display: block;
+    width: 100%;
+}
+
+.menuEmergente ul li {
+    margin: 0;
+}
+
+.menuEmergente ul li a {
+    text-decoration: none;
+}
+
+.contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: #F7C295;
+}
+
+.sinopsis {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    background-color: #0e0e0e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-menu-container {
+    list-style-type: none;
+    color: #f2f2f2;
+    font-size: 18px;
+}
+
+.idiom-item {
+    margin: 1rem 1.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+.idiom-item:hover {
+    opacity: 1;
+}
+
+.copyright {
+    color: #f2f2f2;
+    opacity: 0.3;
+    text-align: center;
+}
