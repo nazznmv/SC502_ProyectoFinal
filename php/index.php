@@ -5,81 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoleMate: Step Up Your Style!</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
-    <nav>
-        <div class="navbar-container">
-            <ul>
-                <li class="activo"></li>
-                <li class="noActivo"><a href="index.html"><img id="logo" src="img/logo.png" alt=""></a></li>
-                <!-- Aquí irá el logo -->
-                <li><a href="">MUJER</a>
-                    <div class="menuEmergente">
-                        <ul>
-                            <li><a href="">Nike</a></li>
-                            <li><a href="">New Balance</a></li>
-                            <li><a href="">Adidas</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="">HOMBRE</a>
-                    <div class="menuEmergente">
-                        <ul>
-                            <li><a href="">Nike</a></li>
-                            <li><a href="">New Balance</a></li>
-                            <li><a href="">Adidas</a></li>
-                        </ul>
-                    </div>
-
-
-                </li>
-                <li><a href="">JUVENIL</a>
-                    <div class="menuEmergente">
-                        <ul>
-                            <li><a href="">Nike</a></li>
-                            <li><a href="">New Balance</a></li>
-                            <li><a href="">Adidas</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="">INFANTE</a>
-                    <div class="menuEmergente">
-                        <ul>
-                            <li><a href="">Nike</a></li>
-                            <li><a href="">New Balance</a></li>
-                            <li><a href="">Adidas</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="">PROMOCIONES</a></li>
-                <li><a href="nosotros.html">NOSOTROS</a></li>
-            </ul>
-            <ul id="accountNav">
-                <li class="noActivo"><a href="myAccount.html"><img style="height: 5vh;" src="/img/myAccount.png"
-                            alt=""></a>
-                    <div class="menuEmergente">
-                        <ul>
-                            <li><a href="">Mi Cuenta</a></li>
-                            <li><a href="">Salir</a></li>
-                            <!-- Esto se mostrará únicamente si el usuario inició sesión -->
-                            <li><a href="php/login.php">Identificarse</a></li>
-                            <li><a href="registro.html">Registrarse</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <!-- Mi cuenta -->
-                <li class="noActivo"><a href="shoppingBag.html"><img style="height: 5vh;" src="/img/bag.png" alt=""></a></li>
-                <!-- Carrito -->
-                <li class="noActivo"><a href=""><img style="height: 5vh;" src="/img/search.png" alt=""></a></li>
-                <!-- Búsqueda -->
-            </ul>
-        </div>
-    </nav>
+    
+    <?php include 'navbar.php'; ?>
 
     <!-- CARRUSEL -->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -91,16 +25,16 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/img1.jpg" class="d-block w-100" alt="...">
+                <img src="../img/img1.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="img/img2.jpg" class="d-block w-100" alt="...">
+                <img src="../img/img2.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="img/img3.jpg" class="d-block w-100" alt="...">
+                <img src="../img/img3.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="img/img4.jpg" class="d-block w-100" alt="...">
+                <img src="../img/img4.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -116,63 +50,63 @@
     <!-- GRID -->
     <div class="grid-container">
         <div class="grid-item">
-            <img src="img/men/Nike-AirJordan1Low.jpg" alt="">
+            <img src="../img/men/Nike-AirJordan1Low.jpg" alt="">
             <div class="overlay"> </div>
             <div class="text"><a href="">Air Jordan 1 Low</a></div>
         </div>
         <div class="grid-item">
-            <img src="img/toddler/Nike-Force1.jpg" alt="">
+            <img src="../img/toddler/Nike-Force1.jpg" alt="">
             <div class="overlay"> </div>
             <div class="text"><a href="">Force 1</a></div>
         </div>
         <div class="grid-item">
-            <img src="img/women/Nike-AirMax90SE.jpg" alt="">
+            <img src="../img/women/Nike-AirMax90SE.jpg" alt="">
             <div class="overlay"> </div>
             <div class="text"><a href="">Air Max 90SE</a></div>
         </div>
         <div class="grid-item">
-            <img src="img/youth/Nike-AirMoreUptempo.jpg" alt="">
+            <img src="../img/youth/Nike-AirMoreUptempo.jpg" alt="">
             <div class="overlay"> </div>
             <div class="text"><a href="">Air More Uptempo</a></div>
         </div>
         <div class="grid-item">
-            <img src="img/men/NB-550.jpg" alt="">
+            <img src="../img/men/NB-550.jpg" alt="">
             <div class="overlay"></div>
             <div class="text"><a href="">550</a></div>
         </div>
         <div class="grid-item">
-            <img src="img/toddler/NB-550.jpg" alt="">
+            <img src="../img/toddler/NB-550.jpg" alt="">
             <div class="overlay"></div>
             <div class="text"><a href="">550</a></div>
         </div>
         <div class="grid-item">
-            <img src="img/women/NB-550.jpg" alt="">
+            <img src="../img/women/NB-550.jpg" alt="">
             <div class="overlay"></div>
             <div class="text"><a href="">550</a></div>
         </div>
         <div class="grid-item">
-            <img src="img/youth/NB-574.jpg" alt="">
+            <img src="../img/youth/NB-574.jpg" alt="">
             <div class="overlay"></div>
             <div class="text"><a href="">574</a></div>
         </div>
         <div class="grid-item">
-            <img src="img/men/Adidas-Forum_84_Low_Shoes_Green_FZ6298_01_standard.jpg" alt="">
+            <img src="../img/men/Adidas-Forum_84_Low_Shoes_Green_FZ6298_01_standard.jpg" alt="">
             <div class="overlay"> </div>
             <div class="text"><a href="">Forum 84 Green</a></div>
         </div>
         <div class="grid-item">
-            <img src="img/toddler/Adidas-_DNA_x_LEGOr_Two-Strap_Hook-and-Loop_Shoes_Yellow_HQ1308_01_standard.jpg"
+            <img src="../img/toddler/Adidas-_DNA_x_LEGOr_Two-Strap_Hook-and-Loop_Shoes_Yellow_HQ1308_01_standard.jpg"
                 alt="">
                 <div class="overlay"> </div>
                 <div class="text"><a href="">DNAxLEGO</a></div>
         </div>
         <div class="grid-item">
-            <img src="img/women/Adidas-Forum_XLG_Shoes_White_IE0236_01_standard.jpg" alt="">
+            <img src="../img/women/Adidas-Forum_XLG_Shoes_White_IE0236_01_standard.jpg" alt="">
             <div class="overlay"> </div>
             <div class="text"><a href="">Forum White</a></div>
         </div>
         <div class="grid-item">
-            <img src="img/youth/Adidas-Forum_Low_Shoes_White_FY7974_01_standard.jpg" alt="">
+            <img src="../img/youth/Adidas-Forum_Low_Shoes_White_FY7974_01_standard.jpg" alt="">
             <div class="overlay"> </div>
             <div class="text"><a href="">Forum White</a></div>
         </div>
