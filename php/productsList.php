@@ -16,11 +16,8 @@
     <!-- NAV -->
     <?php include 'navbar.php'; ?>
     <!-- CIERRE NAV -->
-
-    <?php
-        // Leer el parámetro "categoria" del URL y asignarlo a una variable
-        $categoriaSeleccionada = isset($_GET['categoria']) ? $_GET['categoria'] : 'todos';
-    ?>
+    
+    
 
     <div class="column-container">
         <div class="filtro-container">
