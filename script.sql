@@ -77,7 +77,6 @@ VALUES
 ('Adidas Forum White', 3, 3, 'Forum White', '../img/women/Adidas-Forum_XLG_Shoes_White_IE0236_01_standard.jpg'),
 ('Adidas Forum White', 4, 3, 'Forum White', '../img/youth/Adidas-Forum_Low_Shoes_White_FY7974_01_standard.jpg');
 
-
 CREATE TABLE `inventory` (
   `inventory_id` INT AUTO_INCREMENT PRIMARY KEY,
   `product_id` INT,
@@ -101,6 +100,7 @@ VALUES
 (12, 12, 7);
 
   
+
   
 COMMIT;
 

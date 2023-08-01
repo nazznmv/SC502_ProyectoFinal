@@ -28,6 +28,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_query($conn, $sql)) {
         echo "Actualización exitosa.";
+        if ($role === 'admin') {
+            // Redireccionar al usuario con rol "admin" a tablas.php
+            header("Location: tablas.php");
+        } else {
+            // Redireccionar a los usuarios normales a myaccount.php
+            header("Location: myAccount.php?success=Cuenta actualizada exitosamente!");
+        }
+        exit;
     } else {
         // Error
         echo "Error al actualizar los datos del usuario: " . mysqli_error($conn);
@@ -35,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Cerrar la conexión
     mysqli_close($conn);
 
-    header("Location: tablaUsuarios.php");
+    header("Location: editarUsuario.php?id=" . $_POST['user_id'] . "&error=1");
     exit;
 } else {
     header("Location: editarUsuario.php?id=" . $_POST['user_id'] . "&error=1");

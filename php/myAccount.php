@@ -15,6 +15,29 @@
     <?php 
     include 'navbar.php'; 
     ?>
+
+    <?php
+        // Verificar si hay un mensaje de éxito en la URL
+        if (isset($_GET['success'])) {
+            ?>
+            <div class="alert alert-success">
+                <?php echo $_GET['success']; ?>
+            </div>
+            <?php
+        }
+    ?>
+
+    <?php
+        // Verificar si hay un mensaje de éxito en la URL
+        if (isset($_GET['error'])) {
+            ?>
+            <div class="alert alert-success">
+                <?php echo $_GET['error']; ?>
+            </div>
+            <?php
+        }
+    ?>
+
     <div class="contenedorTabla">
     <h1>Mi Cuenta</h1>
     <table>
