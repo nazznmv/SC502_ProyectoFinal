@@ -53,10 +53,20 @@
             if (isset($_SESSION['user_id'])) {
                 // Si el usuario ha iniciado sesión, mostrar opciones "Mi cuenta" y "Salir"
                 ?>
-                <li class="noActivo"><a href="myAccount.php"><img style="height: 5vh;" src="../img/myAccount.png"
-                            alt=""></a>
+                <li class="noActivo">
+                    <a href="myAccount.php">
+                        <img style="height: 5vh;" src="../img/myAccount.png" alt="">
+                        
+                    </a>
                     <div class="menuEmergente">
                         <ul>
+                        <?php
+                        // Mostrar el tipo de usuario de admin
+                        if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'){
+                            $role = $_SESSION['role'];
+                            echo '<li><a href="">' . $role . '</a></li>';
+                        }
+                        ?>               
                             <li><a href="myAccount.php">Mi Cuenta</a></li>
                             <li><a href="logout.php">Salir</a></li>
                         </ul>

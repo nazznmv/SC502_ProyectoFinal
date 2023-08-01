@@ -32,6 +32,9 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
             // Almacena el ID del usuario en la variable de sesión
             $_SESSION['user_id'] = $row['id'];
 
+            // Almacena el tipo de usuario en la variable de sesión
+            $_SESSION['role'] = $row['role'];
+            
             // Redirige a la página principal
             header("Location: index.php");
             exit();
