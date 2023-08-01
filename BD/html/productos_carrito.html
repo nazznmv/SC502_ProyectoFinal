@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carrito de Productos</title>
+</head>
+<body>
+    <h1>Carrito de Productos</h1>
+
+    <form action="agregar_producto.php" method="post">
+        <label>Nombre del producto:</label>
+        <input type="text" name="nombre" required>
+        <br>
+        <label>Precio:</label>
+        <input type="number" name="precio" step="0.01" required>
+        <br>
+        <label>Cantidad:</label>
+        <input type="number" name="cantidad" required>
+        <br>
+        <input type="submit" value="Agregar al carrito">
+    </form>
+
+    <br>
+
+    <h2>Productos en el carrito:</h2>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Acciones</th>
+        </tr>
+        <!-- Aquí mostraremos los productos agregados al carrito -->
+    </table>
+</body>
+</html>
