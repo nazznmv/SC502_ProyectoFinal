@@ -90,12 +90,22 @@
                         </div>
 
                         <div class="form-group"> 
-                            <label class="Campo" for="role">Rol</label>
+                        
                             <div class="col-sm-10"> 
-                                <select class="form-control" id="role" name="role" <?php echo $disabled; ?>>
-                                    <option value="user" <?php if ($user['role'] === 'user') echo 'selected'; ?>>User</option>
-                                    <option value="admin" <?php if ($user['role'] === 'admin') echo 'selected'; ?>>Admin</option>
-                                </select>
+                            <?php
+                                if ($_SESSION['role'] === 'admin') {
+                                    // Si el usuario es "admin", muestra el campo de selección con las opciones "user" y "admin"
+                                    echo '<label class="Campo" for="role">Rol</label>';
+                                    echo '<select class="form-control" id="role" name="role">';
+                                    echo '<option value="user" ' . (($user['role'] === 'user') ? 'selected' : '') . '>User</option>';
+                                    echo '<option value="admin" ' . (($user['role'] === 'admin') ? 'selected' : '') . '>Admin</option>';
+                                    echo '</select>';
+                                } else {
+                                    // Si el usuario es "user", establece el valor del rol directamente en la consulta SQL
+                                    echo '<input type="hidden" name="role" value="user">';
+                                }
+                            ?>
+
                             </div>
                         </div>
 
