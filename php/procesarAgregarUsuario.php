@@ -26,12 +26,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $conn = mysqli_connect($sname, $uname, $db_password, $db_name);
 
-    // Verifica la conexión
+
     if (!$conn) {
         die("Error en la conexión: " . mysqli_connect_error());
     }
 
-    // Inserta el nuevo usuario en la base de datos
+    
     $sql = "INSERT INTO users (username, password, name, lastname, role) VALUES ('$username', '$password', '$name', '$lastname', '$role')";
 
     if (mysqli_query($conn, $sql)) {
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "Error al agregar el nuevo usuario: " . mysqli_error($conn);
     }
 
-    // Cierra la conexión
+ 
     mysqli_close($conn);
 }
 ?>

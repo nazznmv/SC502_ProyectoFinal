@@ -4,7 +4,7 @@ SOLEMATE
 
 */
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-
+select * from users;
 CREATE DATABASE SOLEMATE;
 
 USE SOLEMATE;
@@ -27,7 +27,7 @@ ALTER TABLE `users`
 
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-  
+  select * from categories;
 CREATE TABLE `categories` (
   `category_id` INT AUTO_INCREMENT PRIMARY KEY,
   `category_name` VARCHAR(50) NOT NULL
@@ -75,7 +75,8 @@ VALUES
 ('Adidas Forum 84 Green', 1, 3, 'Forum 84 Green', '../img/men/Adidas-Forum_84_Low_Shoes_Green_FZ6298_01_standard.jpg'),
 ('Adidas DNAxLEGO', 2, 3, 'DNAxLEGO', '../img/toddler/Adidas-_DNA_x_LEGOr_Two-Strap_Hook-and-Loop_Shoes_Yellow_HQ1308_01_standard.jpg'),
 ('Adidas Forum White', 3, 3, 'Forum White', '../img/women/Adidas-Forum_XLG_Shoes_White_IE0236_01_standard.jpg'),
-('Adidas Forum White', 4, 3, 'Forum White', '../img/youth/Adidas-Forum_Low_Shoes_White_FY7974_01_standard.jpg');
+('Adidas Forum White', 4, 3, 'Forum White', '../img/youth/Adidas-Forum_Low_Shoes_White_FY7974_01_standard.jpg'),
+('test', 1, 1, 'Air Jordan 1 Low', '../img/men/Nike-AirJordan1Low.jpg');
 
 CREATE TABLE `inventory` (
   `inventory_id` INT AUTO_INCREMENT PRIMARY KEY,
@@ -97,12 +98,21 @@ VALUES
 (9, 9, 6),
 (10, 10, 3),
 (11, 11, 9),
-(12, 12, 7);
+(12, 12, 7),
+(13, 13, 13);
 
-  
+CREATE TABLE keywords (
+    keyword_id INT AUTO_INCREMENT PRIMARY KEY,
+    keyword_name VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL
+);
 
-  
+INSERT INTO keywords (keyword_name, address) VALUES
+('nosotros', 'nosotros.php'),
+('productos', 'productsListAll.php'),
+('cuenta', 'myAccount.php'),
+('home','index.php'),
+('catalogo', 'productsListAll.php');
+
+
 COMMIT;
-
-
-

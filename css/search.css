@@ -1,0 +1,40 @@
+
+/*
+body {
+    background-image: linear-gradient(to bottom, #27AAE2, #E0C475);
+}*/
+
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contenedor-grupo {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    width: 30vh;
+    padding: 1vh;
+    margin-left: 1vh; 
+    /*border: 1px solid #ccc;*/
+    background-color: #B1B1B1;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    border: none;
+}
+
+.search-bar-container img {
+    height: 40vh;
+    margin: 2vh;
+    transition: 0.2s;
+}
+
+.search-bar-container img:hover {
+    height: 45vh;
+}
