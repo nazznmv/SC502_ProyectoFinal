@@ -56,7 +56,7 @@
                 </div>
             </form>
 
-            <a class="mt-5" href="registro.html" role="button">Registrarse</a>
+            <a class="mt-5" href="registro.php" role="button">Registrarse</a>
 
         </div>
     </main>

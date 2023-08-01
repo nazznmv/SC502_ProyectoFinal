@@ -64,7 +64,7 @@
                         // Mostrar el tipo de usuario de admin
                         if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'){
                             $role = $_SESSION['role'];
-                            echo '<li><a href="">' . $role . '</a></li>';
+                            echo '<li><a href="tablas.php">' . $role . '</a></li>';
                         }
                         ?>               
                             <li><a href="myAccount.php">Mi Cuenta</a></li>
