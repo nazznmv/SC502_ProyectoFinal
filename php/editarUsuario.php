@@ -112,3 +112,8 @@
                         <button type="submit" class="btn btn-primary" value="Guardar">Guardar Cambios</button>
 
                     </form>
+                    </div>
+        </div>
+    </main>
+</body>
+</html>

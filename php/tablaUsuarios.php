@@ -17,6 +17,9 @@
     ?>
     <div class="contenedorTabla">
     <h1>Tabla de Usuarios</h1>
+    <div class="boton-agregar">
+        <a href="agregarUsuario.php">Agregar nuevo</a>
+    </div>
     <table>
         <tr>
             <th>ID</th>
@@ -69,6 +72,7 @@
         ?>
     </table>
     </div>
+    
     
 </body>
 </html>

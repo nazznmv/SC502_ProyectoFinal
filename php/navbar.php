@@ -92,7 +92,7 @@
             <!-- Carrito -->
             <li class="noActivo"><a href="shoppingBag.php"><img style="height: 5vh;" src="../img/bag.png" alt=""></a></li>
             <!-- Búsqueda -->
-            <li class="noActivo"><a href=""><img style="height: 5vh;" src="../img/search.png" alt=""></a></li>
+            <li class="noActivo"><a href="busqueda.php"><img style="height: 5vh;" src="../img/search.png" alt=""></a></li>
         </ul>
     </div>
 </nav>

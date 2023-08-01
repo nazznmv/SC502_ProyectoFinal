@@ -15,8 +15,8 @@
     margin: 10vh;
     width: auto;
     max-height: 60vh;  
-    overflow-y: auto;
-    position: relative;
+    /*overflow-y: auto;
+    position: relative;*/
 }
 
 .listarTablas{
@@ -77,3 +77,21 @@ table tr:nth-child(odd) {
     background-color: #ddd;
 }
 
+
+.boton-agregar{
+    text-align: center;
+    margin: 6vh;
+}
+
+.boton-agregar a{
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.boton-agregar a:hover{
+    text-decoration: none;
+    font-size: larger;
+    background-color: black;
+    color: white;
+    padding: 2vh;
+}

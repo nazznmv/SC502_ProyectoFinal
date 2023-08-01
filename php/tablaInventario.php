@@ -17,6 +17,9 @@
     ?>
     <div class="contenedorTabla">
     <h1>Tabla de Inventario</h1>
+    <div class="boton-agregar">
+        <a href="">Agregar nuevo</a>
+    </div>
     <table>
         <tr>
             <th>ID</th>
