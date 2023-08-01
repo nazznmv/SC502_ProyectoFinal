@@ -40,7 +40,7 @@
                     </ul>
                 </div>
             </li>
-            <li><a href="">PROMOCIONES</a></li>
+            
             <li><a href="nosotros.php">NOSOTROS</a></li>
         </ul>
         

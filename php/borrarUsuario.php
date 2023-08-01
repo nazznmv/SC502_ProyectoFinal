@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
     $conn = mysqli_connect($sname, $uname, $password, $db_name);
 
     if (!$conn) {
-        die("Error en la conexión: " . mysqli_connect_error());
+        die("Error en la conexión: " . mysqli_connect_error()); //Termina ejecución del script si error
     }
 
     $sql = "DELETE FROM users WHERE id = $user_id";

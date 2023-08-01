@@ -32,12 +32,17 @@
             die("Error en la conexión: " . mysqli_connect_error());
         }
         // Obtener los datos del usuario específico
-        $sql = "SELECT id, username, name, lastname, role FROM users WHERE id = '$user_id'";
+        $sql = "SELECT id, username, name, lastname, password, role FROM users WHERE id = '$user_id'";
         $result = mysqli_query($conn, $sql);
 
         // Verificar datos del usuario existen
         if (mysqli_num_rows($result) > 0) {
             $user = mysqli_fetch_assoc($result);
+
+            // Habilitar el campo "role" solo si el rol es "admin"
+            $disabled = ($_SESSION['role'] === 'admin') ? '' : 'disabled';
+            $defaultRole = ($user['role'] === 'user') ? 'user' : 'admin';
+
         } else {
             echo "El usuario no existe.";
             exit;
@@ -52,7 +57,7 @@
 
     <main>
         <div class="login">
-            <h2>Editar Usuario</h1>
+            <h2>Editar Usuario</h2>
                 <div class="container"> 
                     <form action="enviarEdicionUsuario.php" method="post">                         
                     <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
@@ -64,9 +69,9 @@
                         </div>
 
                         <div class="form-group"> 
-                            <label class="Campo" for="password">Contraseña</label>
+                            <label class="Campo" for="password">Nueva Contraseña</label>
                             <div class="col-sm-10"> 
-                                <input type="password" class="form-control" id="password" name="password" placeholder="password">
+                                <input type="text" class="form-control" placeholder="Nueva contraseña" id="new_password" name="new_password" aria-describedby="emailHelp" value="">
                             </div>
                         </div>
 
@@ -87,27 +92,13 @@
                         <div class="form-group"> 
                             <label class="Campo" for="role">Rol</label>
                             <div class="col-sm-10"> 
-                            <select class="form-control" id="role" name="role">
-                                <option value="admin" <?php if ($user['role'] === 'admin') echo 'selected'; ?>>Admin</option>
-                                <option value="usuario" <?php if ($user['role'] === 'usuario') echo 'selected'; ?>>Usuario</option>
-                            </select>
+                                <select class="form-control" id="role" name="role" <?php echo $disabled; ?>>
+                                    <option value="user" <?php if ($user['role'] === 'user') echo 'selected'; ?>>User</option>
+                                    <option value="admin" <?php if ($user['role'] === 'admin') echo 'selected'; ?>>Admin</option>
+                                </select>
                             </div>
                         </div>
 
-                        
                         <button type="submit" class="btn btn-primary" value="Guardar">Guardar Cambios</button>
 
-                    </form>  
-                </div>
-            </div>
-        </div>
-    </main>
-
-
-</body>
-
-</html>
-
-
-
-
+                    </form>

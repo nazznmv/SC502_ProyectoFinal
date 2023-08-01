@@ -52,7 +52,7 @@
                         <div class="form-group"> 
                             <label class="Campo" for="password">Contraseña</label>
                             <div class="col-sm-10"> 
-                            <input type="password" class="form-control" id="password" name="password" placeholder="password">
+                            <input type="text" class="form-control" id="password" name="password" placeholder="password">
                             </div>
                         </div>
 

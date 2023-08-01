@@ -24,7 +24,7 @@
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Rol</th>
-            <th>Acciones</th>
+            <th>Editar/Eliminar</th>
         </tr>
         <?php
         // Conexión
