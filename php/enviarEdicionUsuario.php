@@ -9,8 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lastname = $_POST['lastname'];
     $role = $_POST['role'];
 
-    echo "Valor de new_password: " . $new_password . PHP_EOL;
-
 
     // BD
     $sname = "localhost";
@@ -44,7 +42,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
 }
 ?>
-
-<script>
-    console.log("Valor de new_password: <?php echo isset($_POST['new_password']) ? $_POST['new_password'] : ''; ?>");
-</script>

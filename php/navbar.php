@@ -4,7 +4,7 @@
             <li class="activo"></li>
             <li class="noActivo"><a href="index.php"><img id="logo" src="../img/logo.png" alt=""></a></li>
             <!-- Aquí irá el logo -->
-            <li><a href="">MUJER</a>
+            <li><a href="productsList.php?categoria=mujer">MUJER</a>
                 <div class="menuEmergente">
                     <ul>
                         <li><a href="">Nike</a></li>
@@ -13,7 +13,7 @@
                     </ul>
                 </div>
             </li>
-            <li><a href="">HOMBRE</a>
+            <li><a href="productsList.php?categoria=hombre">HOMBRE</a>
                 <div class="menuEmergente">
                     <ul>
                         <li><a href="">Nike</a></li>
@@ -22,7 +22,7 @@
                     </ul>
                 </div>
             </li>
-            <li><a href="">JUVENIL</a>
+            <li><a href="productsList.php?categoria=juvenil">JUVENIL</a>
                 <div class="menuEmergente">
                     <ul>
                         <li><a href="">Nike</a></li>
@@ -31,7 +31,7 @@
                     </ul>
                 </div>
             </li>
-            <li><a href="">INFANTE</a>
+            <li><a href="productsList.php?categoria=infante">INFANTE</a>
                 <div class="menuEmergente">
                     <ul>
                         <li><a href="">Nike</a></li>
@@ -42,6 +42,7 @@
             </li>
             
             <li><a href="nosotros.php">NOSOTROS</a></li>
+            <li><a href="productsListAll.php">CATALOGO</a>
         </ul>
         
         <ul id="accountNav">

@@ -16,12 +16,6 @@
     <!-- NAV -->
     <?php include 'navbar.php'; ?>
     <!-- CIERRE NAV -->
-
-    <?php
-        // Leer el parámetro "categoria" del URL y asignarlo a una variable
-        $categoriaSeleccionada = isset($_GET['categoria']) ? $_GET['categoria'] : 'todos';
-    ?>
-
     <div class="column-container">
         <div class="filtro-container">
             <div class="filtro">
@@ -38,63 +32,63 @@
             <div class="product-grid">
                 <!-- Aquí se mostrarán los productos -->
 
-                <div class="grid-item nike hombre">
+                <div class="grid-item nike">
                     <img src="../img/men/Nike-AirJordan1Low.jpg" alt="">
                     <div class="overlay"> </div>
                     <div class="text"><a href="">Air Jordan 1 Low</a></div>
                 </div>
-                <div class="grid-item nike infante">
+                <div class="grid-item nike">
                     <img src="../img/toddler/Nike-Force1.jpg" alt="">
                     <div class="overlay"> </div>
                     <div class="text"><a href="">Force 1</a></div>
                 </div>
-                <div class="grid-item nike mujer">
+                <div class="grid-item nike">
                     <img src="../img/women/Nike-AirMax90SE.jpg" alt="">
                     <div class="overlay"> </div>
                     <div class="text"><a href="">Air Max 90SE</a></div>
                 </div>
-                <div class="grid-item nike juvenil">
+                <div class="grid-item nike">
                     <img src="../img/youth/Nike-AirMoreUptempo.jpg" alt="">
                     <div class="overlay"> </div>
                     <div class="text"><a href="">Air More Uptempo</a></div>
                 </div>
-                <div class="grid-item new-balance hombre">
+                <div class="grid-item new-balance">
                     <img src="../img/men/NB-550.jpg" alt="">
                     <div class="overlay"></div>
                     <div class="text"><a href="">550</a></div>
                 </div>
-                <div class="grid-item new-balance infante">
+                <div class="grid-item new-balance">
                     <img src="../img/toddler/NB-550.jpg" alt="">
                     <div class="overlay"></div>
                     <div class="text"><a href="">550</a></div>
                 </div>
-                <div class="grid-item new-balance mujer">
+                <div class="grid-item new-balance">
                     <img src="../img/women/NB-550.jpg" alt="">
                     <div class="overlay"></div>
                     <div class="text"><a href="">550</a></div>
                 </div>
-                <div class="grid-item new-balance juvenil">
+                <div class="grid-item new-balance">
                     <img src="../img/youth/NB-574.jpg" alt="">
                     <div class="overlay"></div>
                     <div class="text"><a href="">574</a></div>
                 </div>
-                <div class="grid-item adidas hombre">
+                <div class="grid-item adidas">
                     <img src="../img/men/Adidas-Forum_84_Low_Shoes_Green_FZ6298_01_standard.jpg" alt="">
                     <div class="overlay"> </div>
                     <div class="text"><a href="">Forum 84 Green</a></div>
                 </div>
-                <div class="grid-item adidas infante">
+                <div class="grid-item adidas">
                     <img src="../img/toddler/Adidas-_DNA_x_LEGOr_Two-Strap_Hook-and-Loop_Shoes_Yellow_HQ1308_01_standard.jpg"
                         alt="">
                     <div class="overlay"> </div>
                     <div class="text"><a href="">DNAxLEGO</a></div>
                 </div>
-                <div class="grid-item adidas mujer">
+                <div class="grid-item adidas">
                     <img src="../img/women/Adidas-Forum_XLG_Shoes_White_IE0236_01_standard.jpg" alt="">
                     <div class="overlay"> </div>
                     <div class="text"><a href="">Forum White</a></div>
                 </div>
-                <div class="grid-item adidas juvenil">
+                <div class="grid-item adidas">
                     <img src="../img/youth/Adidas-Forum_Low_Shoes_White_FY7974_01_standard.jpg" alt="">
                     <div class="overlay"> </div>
                     <div class="text"><a href="">Forum White</a></div>
@@ -107,7 +101,7 @@
     </div>
 
 
-    <script src="../js/productsList.js"></script>
+    <script src="../js/productsListAll.js"></script>
 </body>
 
 </html>
