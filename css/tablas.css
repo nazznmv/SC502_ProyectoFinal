@@ -11,6 +11,14 @@
     width: auto;
 }
 
+.listarTablas{
+    text-align: center;
+}
+
+.listarTablas ul li{
+    list-style: none;
+    font-size: 2rem;
+}
 
 table {
     margin: 0 auto;

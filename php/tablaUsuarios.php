@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingresar Usuario</title>
+    <title>Usuarios</title>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/tablas.css">
@@ -54,9 +54,9 @@
                 echo "<td>" . $row["lastname"] . "</td>";
                 echo "<td>" . $row["role"] . "</td>";
                 echo "<td>";
-                echo "<a href='editar_usuario.php?id=" . $row["id"] . "'>Editar</a>";
+                echo "<a href='editarUsuario.php?id=" . $row["id"] . "'>Editar</a>";
                 echo " | ";
-                echo "<a href='borrar_usuario.php?id=" . $row["id"] . "'>Borrar</a>";
+                echo "<a href='borrarUsuario.php?id=" . $row["id"] . "'>Borrar</a>";
                 echo "</td>";
                 echo "</tr>";
             }

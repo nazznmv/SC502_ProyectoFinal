@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingresar Usuario</title>
+    <title>Tablas</title>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/tablas.css">
