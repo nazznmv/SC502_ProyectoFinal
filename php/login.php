@@ -12,22 +12,38 @@
 </head>
 
 <body>
-    <?php include 'navbar.php'; ?>
+    <?php 
+    // Iniciar sesión antes de incluir el navbar.php
+    //session_start(); 
+    include 'navbar.php'; 
+    ?>
 
     <main>
         <div class="login">
             <h2>Iniciar Sesión</h2>
-            <form action="loginSubmit.php" method="post">
+            <?php
+            // Mostrar mensaje de error si existe
+            if (isset($_GET['error'])) {
+                ?>
                 <div class="alert alert-danger">
-                    Contraseña o usuario incorrecto.
+                    <?php echo $_GET['error']; ?>
                 </div>
+                <?php
+            }
+
+            // Mostrar mensaje de éxito si existe
+            if (isset($_GET['success'])) {
+                ?>
                 <div class="alert alert-success">
-                    Identificado con éxito.
+                    <?php echo $_GET['success']; ?>
                 </div>
+                <?php
+            }
+            ?>
+            <form action="loginSubmit.php" method="post">
                 <!-- Login Controls -->
                 <div class="form-group">
                     <label class="Campo" for="txtUsername">Usuario</label>
-                    <!-- Los id son obligatorios asi -->
                     <input type="text" class="form-control" id="uname" name="uname" placeholder="Username">
                 </div>
                 <div class="form-group">
@@ -40,7 +56,7 @@
                 </div>
             </form>
 
-            <a class="mt-5" href="registro.html" role="button">Registarse</a>
+            <a class="mt-5" href="registro.html" role="button">Registrarse</a>
 
         </div>
     </main>

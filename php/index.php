@@ -14,6 +14,19 @@
 <body>
     
     <?php include 'navbar.php'; ?>
+    
+    <?php
+        // Verificar si hay un mensaje de éxito en la URL
+        if (isset($_GET['success'])) {
+            ?>
+            <div class="alert alert-success">
+                <?php echo $_GET['success']; ?>
+            </div>
+            <?php
+        }
+    ?>
+
+    
 
     <!-- CARRUSEL -->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
