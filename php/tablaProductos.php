@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +25,7 @@
             <th>Categoría</th>
             <th>Marca</th>
             <th>Modelo</th>
-            <th>Cantidad</th>
+            <th>Imagen</th> <!-- Nueva columna para la imagen -->
             <th>Editar/Eliminar</th>
         </tr>
         <?php
@@ -43,12 +42,12 @@
             die("Error en la conexión: " . mysqli_connect_error());
         }
 
-        // obtener los datos de los usuarios
-        $sql = "SELECT products.product_id, products.product_name, categories.category_name, brands.brand_name, products.model, inventory.quantity 
-        FROM inventory INNER JOIN products ON inventory.product_id = products.product_id INNER JOIN categories ON products.category_id = categories.category_id
-        INNER JOIN brands ON products.brand_id = brands.brand_id";
+        // obtener los datos de los productos con información de la categoría y la marca
+        $sql = "SELECT products.product_id, products.product_name, categories.category_name, brands.brand_name, products.model, products.image 
+        FROM products INNER JOIN categories ON products.category_id = categories.category_id
+        INNER JOIN brands ON products.brand_id = brands.brand_id
+        ORDER BY product_id";
         $result = mysqli_query($conn, $sql);
-
 
         // Verificar si hay filas
         if (mysqli_num_rows($result) > 0) {
@@ -59,16 +58,16 @@
                 echo "<td>" . $row["category_name"] . "</td>";
                 echo "<td>" . $row["brand_name"] . "</td>";
                 echo "<td>" . $row["model"] . "</td>";
-                echo "<td>" . $row["quantity"] . "</td>";
+                echo "<td><img src='" . $row["image"] . "' alt='Imagen del Producto' height='100'></td>";
                 echo "<td>";
-                echo "<a href='editarUsuario.php?id=" . $row["product_id"] . "'>Editar</a>";
+                echo "<a href='editarProducto.php?product_id=" . $row["product_id"] . "'>Editar</a>";
                 echo " | ";
-                echo "<a href='borrarUsuario.php?id=" . $row["product_id"] . "'>Borrar</a>";
+                echo "<a href='borrarProducto.php?product_id=" . $row["product_id"] . "'>Borrar</a>";
                 echo "</td>";
                 echo "</tr>";
             }
         } else {
-            echo "<tr><td colspan='5'>No se encontraron usuarios</td></tr>";
+            echo "<tr><td colspan='7'>No se encontraron productos</td></tr>";
         }
 
         // Cerrar la conexión

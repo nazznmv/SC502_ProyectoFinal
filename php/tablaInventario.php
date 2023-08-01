@@ -22,6 +22,7 @@
             <th>ID</th>
             <th>ID de Producto</th>
             <th>Nombre del Producto</th>
+            <th>Categoría</th>
             <th>Cantidad</th>
             <th>Editar/Eliminar</th>
         </tr>
@@ -40,7 +41,7 @@
         }
 
         // obtener los datos del inventario con información del producto
-        $sql = "SELECT inventory.inventory_id, products.product_id, products.product_name, inventory.quantity FROM inventory INNER JOIN products ON inventory.product_id = products.product_id";
+        $sql = "SELECT inventory.inventory_id, products.product_id, products.product_name, categories.category_name, inventory.quantity FROM inventory INNER JOIN products ON inventory.product_id = products.product_id INNER JOIN categories ON products.category_id = categories.category_id ORDER BY inventory.inventory_id";
         $result = mysqli_query($conn, $sql);
 
         // Verificar si hay filas
@@ -50,11 +51,12 @@
                 echo "<td>" . $row["inventory_id"] . "</td>";
                 echo "<td>" . $row["product_id"] . "</td>";
                 echo "<td>" . $row["product_name"] . "</td>";
+                echo "<td>" . $row["category_name"] . "</td>";
                 echo "<td>" . $row["quantity"] . "</td>";
                 echo "<td>";
-                echo "<a href='editarUsuario.php?id=" . $row["inventory_id"] . "'>Editar</a>";
+                echo "<a href='editarInventario.php?inventory_id=" . $row["inventory_id"] . "'>Editar</a>";
                 echo " | ";
-                echo "<a href='borrarUsuario.php?id=" . $row["inventory_id"] . "'>Borrar</a>";
+                echo "<a href='borrarInventario.php?inventory_id=" . $row["inventory_id"] . "'>Borrar</a>";
                 echo "</td>";
                 echo "</tr>";
             }

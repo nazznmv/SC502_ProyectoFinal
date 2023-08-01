@@ -50,14 +50,14 @@
                 echo "<td>" . $row["category_id"] . "</td>";
                 echo "<td>" . $row["category_name"] . "</td>";
                 echo "<td>";
-                echo "<a href='editarUsuario.php?id=" . $row["category_id"] . "'>Editar</a>";
+                echo "<a href='editarCategoria.php?category_id=" . $row["category_id"] . "'>Editar</a>";
                 echo " | ";
-                echo "<a href='borrarUsuario.php?id=" . $row["category_id"] . "'>Borrar</a>";
+                echo "<a href='borrarCategoria.php?category_id=" . $row["category_id"] . "'>Borrar</a>";
                 echo "</td>";
                 echo "</tr>";
             }
         } else {
-            echo "<tr><td colspan='5'>No se encontraron usuarios</td></tr>";
+            echo "<tr><td colspan='5'>No se encontraron categorías</td></tr>";
         }
 
         // Cerrar la conexión
