@@ -25,8 +25,10 @@
         <div class="listarTablas">
             <ul>
                 <li><a href="tablaUsuarios.php">Usuarios</a></li>
-                <li><a href="">Productos</a></li>
-                <li><a href=""></a></li>
+                <li><a href="tablaMarcas.php">Marcas</a></li>
+                <li><a href="tablaCategorias.php">Categorías</a></li>
+                <li><a href="tablaInventario.php">Inventario</a></li>
+                <li><a href="tablaProductos.php">Productos</a></li>
             </ul>
         </div>
     </main>
